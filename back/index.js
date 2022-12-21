@@ -9,6 +9,11 @@ const express = require('express');
 const app = express();
 const port = 3000;
 
+// express 미들웨어 설정
+
+// 정적 파일제공 (리버스 프록시를 위한 nginx 설정 재시작후) 
+app.use(express.static("front"));
+
 // cors 설정 (연습중이므로 보안설정을 느슨하게 설정함)
 app.use(cors());
 
