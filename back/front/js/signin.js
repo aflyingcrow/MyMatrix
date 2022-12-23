@@ -11,7 +11,7 @@ if (token) {
 const buttonSignin = document.getElementById("signin");
 const inputEmail = document.getElementById("email");
 const inputPassword = document.getElementById("password");
-const signContainer = document.getElementById(".signContainer");   // 임의 추가
+const signContainer = document.querySelector(".signContainer");   // 임의 추가
 
 buttonSignin.addEventListener("click", signin);
 signContainer.addEventListener("keypress", signin);   // 임의 추가
