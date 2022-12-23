@@ -11,17 +11,17 @@ if (token) {
 const buttonSignin = document.getElementById("signin");
 const inputEmail = document.getElementById("email");
 const inputPassword = document.getElementById("password");
-const signContainer = document.querySelector(".signContainer");   // 임의 추가
+const signinForm = document.querySelector(".signin-form");   // 임의 추가
 
 buttonSignin.addEventListener("click", signin);
-signContainer.addEventListener("keypress", signin);   // 임의 추가
+signinForm.addEventListener("keypress", signin);   // 임의 추가
 
 // 로그인 처리 함수
 async function signin(event) {
     const currentEmail = inputEmail.value;
     const currentPassword = inputPassword.value;
     const eventType = event.type;   // 임의 추가
-    const key = event.key;  // 임의 추가
+    const key = event.key;          // 임의 추가
 
     if (eventType !== "click" && key !== "Enter"){  // 임의 추가
         return false;                               // 임의 추가

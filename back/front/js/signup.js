@@ -90,9 +90,20 @@ function isValidNickname(event) {
 // ### 회원가입 API 요청
 
 const buttonSignup = document.getElementById("signup");
+const signupForm = document.querySelector(".signup-form");   // 임의 추가
+
 buttonSignup.addEventListener("click", signup);
+signupForm.addEventListener("keypress", signup);   // 임의 추가
 
 async function signup(event) {
+
+    const eventType = event.type;   // 임의 추가
+    const key = event.key;          // 임의 추가
+
+    if (eventType !== "click" && key !== "Enter"){  // 임의 추가
+        return false;                               // 임의 추가
+    }                                               // 임의 추가
+
     const isValidReq = 
         isValidEmail() && 
         isValidPassword() && 
